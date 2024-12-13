@@ -27,6 +27,11 @@ package_install "git" "-v"
 package_install "unzip" "-v"
 package_install "libyaml" "-v"
 package_install "mise" "-v"
+
+# Activate mise in zsh
+echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
+source ~/.zshrc
+
 # brew install fzf ripgrep bat eza zoxide plocate btop fd tlrc
 
 printf "\nLanguages\n"
