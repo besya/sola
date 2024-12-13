@@ -39,6 +39,6 @@ ROOT=~/.local/share/sola
 rm -rf $ROOT
 mkdir $ROOT
 # cp -r ./* $ROOT >/dev/null
-git clone https://github.com/besya/sola.git ~/.local/share/sola >/dev/null
+git clone --quiet https://github.com/besya/sola.git ~/.local/share/sola
 
 source $ROOT/install.sh
