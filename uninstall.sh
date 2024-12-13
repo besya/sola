@@ -16,5 +16,5 @@ if command -v mise > /dev/null 2>&1; then
 fi
 
 if command -v brew > /dev/null 2>&1; then
-    spin "brew uninstall --force mise libyaml unzip git curl gum" "Libraries ${ARROW}"
+    spin "brew uninstall --force mise libyaml unzip git gum" "Libraries ${ARROW}"
 fi
