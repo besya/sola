@@ -30,7 +30,7 @@ package_install "mise" "-v"
 
 # Activate mise in zsh
 echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
-source ~/.zshrc
+mise activate zsh
 
 # brew install fzf ripgrep bat eza zoxide plocate btop fd tlrc
 
