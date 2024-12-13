@@ -13,6 +13,7 @@ fi
 
 if command -v mise > /dev/null 2>&1; then
     spin "mise uninstall --all" "Languages ${ARROW}"
+    sed -i '' '/eval "$(mise activate zsh)"/d' ~/.zshrc
 fi
 
 if command -v brew > /dev/null 2>&1; then
