@@ -28,10 +28,6 @@ package_install "unzip" "-v"
 package_install "libyaml" "-v"
 package_install "mise" "-v"
 
-# Activate mise in zsh
-echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
-eval "$(mise activate zsh)"
-
 # brew install fzf ripgrep bat eza zoxide plocate btop fd tlrc
 
 printf "\nLanguages\n"
@@ -72,3 +68,9 @@ printf "\nApplications\n"
 
 # Applications
 package_install "zed"
+
+# Activate mise in zsh
+echo "Add mise to zsh"
+echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
+eval "$(mise activate zsh)"
+
