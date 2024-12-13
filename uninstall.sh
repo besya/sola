@@ -8,7 +8,7 @@ source $ROOT/helpers.sh
 echo "Uninstalling..."
 
 if command -v brew > /dev/null 2>&1; then
-    spin "brew uninstall --force zed" "Libraries ${ARROW}" "Applications ${ARROW}"
+    spin "brew uninstall --force zed" "Applications ${ARROW}"
 fi
 
 if command -v mise > /dev/null 2>&1; then
