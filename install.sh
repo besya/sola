@@ -29,9 +29,7 @@ package_install "libyaml" "-v"
 package_install "mise" "-v"
 
 # Activate mise in zsh
-echo "Add mise to zsh"
 echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
-eval "$(mise activate)"
 
 # brew install fzf ripgrep bat eza zoxide plocate btop fd tlrc
 
