@@ -29,7 +29,8 @@ package_install "libyaml" "-v"
 package_install "mise" "-v"
 
 # Activate mise in zsh
-echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
+# echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
+# eval "$(mise activate zsh)"
 
 # brew install fzf ripgrep bat eza zoxide plocate btop fd tlrc
 
@@ -72,4 +73,16 @@ printf "\nApplications\n"
 # Applications
 package_install "zed"
 
+package_install "wezterm"
+cp -r $ROOT/config/wezterm ~/.config
+# brew search nerd-font
+# wezterm ls-fonts --list-system
+# wezterm ls-fonts --list-system | grep GoMono
 
+package_install "starship"
+cp -r $ROOT/config/starship ~/.config
+
+package_install "zsh-syntax-highlighting zsh-autosuggestions"
+
+mv ~/.zshrc ~/.zshrc.before-install-sola.bak
+cp $ROOT/config/zshrc ~/.zshrc
