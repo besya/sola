@@ -11,7 +11,7 @@ printf "\nSystem libraries\n"
 
 # Homebrew
 if command -v brew > /dev/null 2>&1; then
-    spin "brew update && brew upgrade" "⚙️ ${CYAN}brew${NC} ${ARROW}"
+    spin "brew update && brew upgrade" "⚙️  ${CYAN}brew${NC} ${ARROW}"
 else
     echo "|> Installing"
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
