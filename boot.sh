@@ -19,6 +19,8 @@ colors=(
 	'\033[38;5;57m' # Deep Sky Blue
 	'\033[38;5;51m' # Cornflower Blue
 	'\033[38;5;45m' # Royal Blue
+	'\033[38;5;39m' # Medium Blue
+	'\033[38;5;33m' # Dark Blue
 )
 
 # Split the ASCII art into lines
