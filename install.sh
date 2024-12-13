@@ -23,7 +23,6 @@ fi
 
 # System
 package_install "gum" "-v"
-package_install "curl" "--version"
 package_install "git" "-v"
 package_install "unzip" "-v"
 package_install "libyaml" "-v"
