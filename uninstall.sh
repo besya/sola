@@ -1,15 +1,20 @@
 # Exit immediately if a command exits with a non-zero status
 set -e
 
+# Helpers
+ROOT=~/.local/share/sola
+source $ROOT/helpers.sh
+
 echo "Uninstalling..."
 
-mise uninstall --all
-brew uninstall --force libyaml unzip git curl gum
+if command -v brew > /dev/null 2>&1; then
+    spin "brew uninstall --force zed" "Libraries ${ARROW}" "Applications ${ARROW}"
+fi
 
-# source ./uninstall/app-nix.sh
+if command -v mise > /dev/null 2>&1; then
+    spin "mise uninstall --all" "Languages ${ARROW}"
+fi
 
-# brew uninstall gum
-# brew uninstall curl git unzip
-
-# Run terminal installers
-# for installer in ~/.local/share/sola/install/terminal/*.sh; do source $installer; done
+if command -v brew > /dev/null 2>&1; then
+    spin "brew uninstall --force mise libyaml unzip git curl gum" "Libraries ${ARROW}"
+fi

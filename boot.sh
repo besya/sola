@@ -31,7 +31,7 @@ for i in "${!lines[@]}"; do
 done
 
 
-# echo "=> Sola!"
+echo -e '\033[0m' # Set to default color
 echo "Begin installation (or abort with ctrl+c)..."
 
 ROOT=~/.local/share/sola

@@ -7,6 +7,8 @@ SELECTED_LANGUAGES="Ruby","Rails"
 # Helpers
 source $ROOT/helpers.sh
 
+printf "\nSystem libraries\n"
+
 # Homebrew
 if command -v brew > /dev/null 2>&1; then
     spin "brew update && brew upgrade" "⚙️ ${CYAN}brew${NC} ${ARROW}"
@@ -20,7 +22,6 @@ else
 fi
 
 # System
-printf "System libraries"
 package_install "gum" "-v"
 package_install "curl" "--version"
 package_install "git" "-v"
@@ -28,6 +29,8 @@ package_install "unzip" "-v"
 package_install "libyaml" "-v"
 package_install "mise" "-v"
 # brew install fzf ripgrep bat eza zoxide plocate btop fd tlrc
+
+printf "\nLanguages\n"
 
 # Languages
 languages=$(gum choose "${AVAILABLE_LANGUAGES[@]}" --no-limit --selected "$SELECTED_LANGUAGES" --height 10 --header "Select programming languages")
@@ -57,7 +60,11 @@ if [[ -n "$languages" ]]; then
                 ;;
         esac
     done
+else
+    echo "No languages are selected for install"
 fi
+
+printf "\nApplications\n"
 
 # Applications
 package_install "zed"
